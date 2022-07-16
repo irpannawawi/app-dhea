@@ -113,7 +113,7 @@ class MavController extends Controller
                                     ['tanggal', '<=', $bulan_selesai]])
                             ->sum('qty');
                 $dataTemp = [
-                    'barang'=> DB::table('table_barang')->get()[0],
+                    'barang'=> DB::table('table_barang')->where('SKU', $br->SKU)->get()[0],
                     'sma' => round($jumlahKeluar/$step, 2),
                     'masuk'=>$jumlahMasuk,
                     'keluar'=>$jumlahKeluar
