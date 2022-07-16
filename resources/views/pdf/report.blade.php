@@ -83,8 +83,8 @@
                 <td>{{++$n}}</td>
                 <td>{{$row['barang']->SKU}}</td>
                 <td>{{$row['barang']->nama_barang}}</td>
-                <td>{{$row['masuk']-$row['keluar']}}</td>
                 <td>{{$row['masuk']}}</td>
+                <td>{{$row['masuk']+$row['keluar']}}</td>
                 <td>{{$row['keluar']}}</td>
                 <td>{{$row['sma']}}</td>
             </tr>
